@@ -18,23 +18,9 @@ finish-args:
 modules:
   # needed by pygame
   # otherwise an error message occurs which complains about setuptools
-  - name: portmidi
-    buildsystem: cmake
-    sources:
-      - type: git
-        url: https://github.com/PortMidi/portmidi.git
-        tag: v2.0.3
-
+  - portmidi.yaml
   # needed by the rumble manager
-  - name: libshake
-    buildsystem: simple
-    build-commands:
-      - BACKEND=LINUX PREFIX=${FLATPAK_DEST} make install
-    sources:
-      - type: git
-        url: https://github.com/zear/libShake.git
-        tag: v0.3.2
-
+  - libshake.yaml
   - python3-requirements.json
   - name: tuxemon
     buildsystem: simple
