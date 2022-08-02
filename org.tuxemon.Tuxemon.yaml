@@ -18,9 +18,9 @@ finish-args:
 modules:
   # needed by pygame
   # otherwise an error message occurs which complains about setuptools
-  - portmidi.yaml
+  - portmidi.json
   # needed by the rumble manager
-  - libshake.yaml
+  - libshake.json
   - python3-requirements.json
   - name: tuxemon
     buildsystem: simple
