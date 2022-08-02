@@ -42,7 +42,7 @@ modules:
 
     sources:
     - type: git
-      commit: 1c9b59686679a4ca7685027292e0881d1545a55d
+      tag: v0.4.33
       url: https://github.com/Tuxemon/Tuxemon.git
     - type: script
       dest-filename: org.tuxemon.Tuxemon
