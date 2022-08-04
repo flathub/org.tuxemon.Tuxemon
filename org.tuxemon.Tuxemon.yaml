@@ -18,23 +18,9 @@ finish-args:
 modules:
   # needed by pygame
   # otherwise an error message occurs which complains about setuptools
-  - name: portmidi
-    buildsystem: cmake
-    sources:
-      - type: git
-        url: https://github.com/PortMidi/portmidi.git
-        tag: v2.0.3
-
+  - portmidi.json
   # needed by the rumble manager
-  - name: libshake
-    buildsystem: simple
-    build-commands:
-      - BACKEND=LINUX PREFIX=${FLATPAK_DEST} make install
-    sources:
-      - type: git
-        url: https://github.com/zear/libShake.git
-        tag: v0.3.2
-
+  - libshake.json
   - python3-requirements.json
   - name: tuxemon
     buildsystem: simple
@@ -56,11 +42,8 @@ modules:
 
     sources:
     - type: git
-      tag: v0.4.33
+      tag: v0.4.34
       url: https://github.com/Tuxemon/Tuxemon.git
-    - type: patch # TODO: remove patch once new version is published, because the changes are already upstream
-      use-git: true
-      path: 0001-add-128pixel-icon-and-appdata-file-from-development-.patch
     - type: script
       dest-filename: org.tuxemon.Tuxemon
       commands:
