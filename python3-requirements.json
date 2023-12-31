@@ -225,7 +225,7 @@
             "name": "python3-pydantic",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pydantic>=2.4\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pydantic>=2.5.3\" --no-build-isolation"
             ],
             "sources": [
                 {
