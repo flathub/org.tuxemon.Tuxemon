@@ -14,7 +14,7 @@ finish-args:
 - --persist=.tuxemon
 - --share=network
 - --socket=pulseaudio
-- --device=all
+- --device=all # to be able to access gamepads device=all is required
 modules:
   # needed by pygame
   # otherwise an error message occurs which complains about setuptools
@@ -49,3 +49,4 @@ modules:
       commands:
       - MY_PATH="$(dirname "$0")"
       - python3 "$MY_PATH/org.tuxemon.Tuxemon.py"
+
