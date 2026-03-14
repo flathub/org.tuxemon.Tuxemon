@@ -53,5 +53,3 @@ modules:
           - BUNDLED="/app/share/Tuxemon/mods"
           - if [ ! -d "$PERSIST" ] || [ -z "$(ls -A "$PERSIST")" ]; then mkdir -p "$PERSIST"; cp -r "$BUNDLED"/* "$PERSIST"; fi
           - exec python3 /app/share/Tuxemon/org.tuxemon.Tuxemon.py "$@"
-
-
